@@ -1,0 +1,81 @@
+*{margin:0;padding:0; box-sizing:border-box;
+height:100%;}
+main{
+  width:100%;
+  height:100vh;
+  margin: auto;
+  border:1px solid grey;
+  display:grid;
+  grid-template-rows: 60px 40px 570px 60px;
+  grid-template-columns:400px auto;
+}
+#roundrec
+{
+  border-radius: 15px;
+  background: rgb(79, 47, 74);
+  padding: 10px;
+  width:380px;
+  height: 30px;
+  margin-top: 6px;
+  margin-left: 8px;
+}
+#roundrec1
+{
+  border-radius: 15px;
+  background: rgb(79, 47, 74);
+  padding: 10px;
+  width:890px;
+  height: 50px;
+  margin-top: 6px;
+  margin-left: 8px;
+}
+.div1{background-color: aqua;}
+.div2{background-color: rgb(127, 150, 255);}
+.div3{background-color:blueviolet;}
+.div4{background-color:coral;
+grid-row: span 2;
+overflow-y: auto;
+}
+.div5{background-color:crimson;
+grid-row: span 2;
+overflow-y:auto ;
+}
+.send{background-color: darkslateblue;
+height:100%-40px;
+}
+.btn
+{
+  cursor: pointer;
+  border:2px solid black;
+  border-radius: 6px;
+  height:30px;
+  width:52px;
+}
+.message{
+    background-color: rgb(12, 155, 211);
+    width: 24%;
+    padding: 10px;
+    height: 50px;
+    margin:8px 15px;
+    border-radius: 15px;
+    border:2px solid rgb(192, 226, 43);
+}
+.naming{
+  background-color: rgb(108, 211, 12);
+  width: 90%;
+  padding: 10px;
+  height: 50px;
+  margin:8px 15px;
+  border-radius: 15px;
+  border:2px solid rgb(192, 226, 43);
+}
+
+.left{
+     float:left;
+     clear:both;
+}
+
+.right{
+     float:right;
+     clear:both;
+}

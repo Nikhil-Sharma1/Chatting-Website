@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>whatsapp clone</title>
+    <script defer src='http://localhost:8000/socket.io/socket.io.js'></script> <!--join server and client--> 
+    <script defer src='js/client.js'></script>
+    <link rel="stylesheet" type='text/css' href="stylegrid.css">
+  </head>
+  <body>
+    <main>
+      <div class="div1">
+        <img src= "cion.jpg" align="left" alt= "icon" style="vertical-align: middle;margin-left: 10px; margin-top: 25px;">
+        <img src= "cion.jpg" align="right" alt= "msg"style="vertical-align: middle;margin-right: 10px; margin-top: 25px;">
+        <img src= "cion.jpg" align="right" alt= "status"style="vertical-align: middle;margin-right: 10px; margin-top: 25px;">
+      </div>
+      <div class="div2">
+        <img src= "cion.jpg" align="left" alt= "icon" style="vertical-align: middle; margin-left: 10px; margin-top: 25px;">
+        <img src= "cion.jpg" align="right" alt= "options" style="vertical-align: middle; margin-right: 20px; margin-top: 25px;">
+        <img src= "cion.jpg" align="right" alt= "Search" style="vertical-align: middle; margin-right: 10px; margin-top: 25px;">
+        <h3 text align="left" style="vertical-align: middle;  margin-top: 23px;margin-left: 60px;">Name of person/group</h3>
+        
+      </div>
+      <div class="div3">
+        <input type="text" id="roundrec" placeholder="Search and start new chat">
+          
+      </input>
+      </div>
+      <div class="div4">
+        <!--<div class="message right">Nikhil: hi</div>
+        <div class="message left">Abhi: hello</div>-->
+      </div>
+      <div class="div5">
+        
+      </div>
+      <div class="send">
+        <form action="#" id="send-msg">
+        <img src= "cion.jpg" align="left" alt= "emoji" style="vertical-align: middle; margin-left: 10px; margin-top: 23px;">
+        <img src= "cion.jpg" align="left" alt= "files" style="vertical-align: middle; margin-left: 10px; margin-top: 23px;">
+        <input type="text" name ="roundrec1" id="roundrec1" placeholder="Type your message here">
+        <!--<img src= "cion.jpg" align="right" alt= "send" style="vertical-align: middle; margin-right: 10px; margin-top: 23px;">-->
+        <button class="btn" type="submit">Send</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
