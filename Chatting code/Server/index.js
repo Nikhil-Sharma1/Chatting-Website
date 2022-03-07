@@ -7,9 +7,6 @@ cors: {
 var count=0;
 const mongoose = require("mongoose");
 
-
-
-
 mongoose.connect(
   "mongodb+srv://Nikhil:NIKHIL098sharma@cluster0.6ecwx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",function(err, db)
   {
@@ -51,8 +48,9 @@ io.on('connection', socket =>        //listen all connections from all users //w
       sec=date.getSeconds();
       msec=date.getMilliseconds();
     }
-    console.log(naame)
+    //console.log(naame)
     users[socket.id]=naame;             //when user joined event come, it will set name under the user 
+    console.log(users[socket.id]);
     names=users;
     // for(let x in users)
     // {
@@ -86,7 +84,7 @@ io.on('connection', socket =>        //listen all connections from all users //w
 
     
     
-    console.log(count);
+    //console.log(count);
     socket.emit('noofuser',count);
     socket.broadcast.emit('currentnoofusers',count);
     socket.emit('current-user-joined', names);
@@ -138,16 +136,17 @@ io.on('connection', socket =>        //listen all connections from all users //w
   {
     //console.log(message);
     
-    socket.broadcast.emit('go', {name: users[socket.id]})
+    socket.broadcast.emit('go', {name:users[socket.id]})
     // console.log(name);
     
-    socket.broadcast.emit('deletealluser',{name: users[socket.id]});
-    console.log(users[socket.id]);
+    socket.broadcast.emit('deletealluser',{name:users[socket.id]});
+    //console.log(users[socket.id]);
     delete users[socket.id];
     // var names=users;
     //console.log(names);
-    socket.broadcast.emit('show currentusers',names);
+    //socket.broadcast.emit('show currentusers',names);
   });
   //console.log(date);
   //console.log(date);
 });
+
