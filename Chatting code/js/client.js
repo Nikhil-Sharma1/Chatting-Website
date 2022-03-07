@@ -1,3 +1,4 @@
+
 const socket=io("http://localhost:8000");
 
 const form=document.getElementById("send-msg");
@@ -90,7 +91,7 @@ const nameofpeople = (names)=>
 {
     //prompt("hello");
     var li = document.createElement('li');
-    li.setAttribute('id','List');
+    li.setAttribute('id',names);
     
     var a=document.createElement('a');
     a.innerHTML="<span class='fa-stack user1 fa-2x'>"+
@@ -134,7 +135,7 @@ socket.on('user-joined',names=>
     const time=`${hour}:${min}:${sec}:${msec}`;
     append(`<b>${names}</b> joined the chat`,time,'left');
     
-    nameofpeople(`<b>${names}</b>`);
+    nameofpeople(`<b> ${names} </b>`);
     
   })
 
@@ -153,8 +154,12 @@ socket.on('user-joined',names=>
 
   socket.on('deletealluser',n =>
   {
-    document.getElementById("theList").innerHTML = null;
-
+    var t=document.getElementById("theList");
+    var s=n.name;
+    alert(s);
+    var item=document.getElementById(`<b> ${s} </b>`);
+    //alert(item);
+    t.removeChild(item);
   });
 
   
@@ -487,6 +492,23 @@ socket.on("icon remove",icon=>
   iconremove(icon);
 })
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function diftime(a,b,d)
 {
   var c;
@@ -610,3 +632,5 @@ function setHour() {
   }
   hour = hour + 1;
 }
+
+
